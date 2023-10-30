@@ -14,10 +14,10 @@
     <header class="flex-0 bg-slate-100 px-4 border shadow-md">
         <div class="max-w-screen-lg mx-auto flex justify-between items-center min-h-[40px]">
             <div class="">
-                <a href="<?php echo home_url() ?>">Logo</a>
+                <a href="<?= home_url() ?>">Gruyère Padel Club</a>
             </div>
             <div>
-                <?php echo wp_nav_menu() ?>
+                <?= wp_nav_menu() ?>
             </div>
         </div>
     </header>
