@@ -1,0 +1,14 @@
+{
+    "name": "acf/buttons",
+    "title": "Boutons",
+    "description": "Un bouton / lien",
+    "style": ["file:./buttons.css"],
+    "category": "text",
+    "icon": "dashicons-button",
+    "keywords": ["bouton", "lien", "button", "link"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "buttons.php"
+    },
+    "supports": {}
+}

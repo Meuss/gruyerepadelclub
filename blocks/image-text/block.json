@@ -1,0 +1,14 @@
+{
+    "name": "acf/image-text",
+    "title": "Image + Texte",
+    "description": "Une image avec un texte à droite ou à gauche",
+    "style": ["file:./image-text.css"],
+    "category": "text",
+    "icon": "dashicons-format-image",
+    "keywords": ["texte", "text", "image"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "image-text.php"
+    },
+    "supports": {}
+}
