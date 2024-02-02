@@ -4,7 +4,7 @@
     "description": "Un bouton / lien",
     "style": ["file:./buttons.css"],
     "category": "text",
-    "icon": "dashicons-button",
+    "icon": "button",
     "keywords": ["bouton", "lien", "button", "link"],
     "acf": {
         "mode": "preview",

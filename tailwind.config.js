@@ -6,8 +6,8 @@ module.exports = {
         './templates/**/*.php',
         './template-parts/**/*.php',
         './blocks/**/*.php',
+        './blocks/membre-comite/membre-comite.php',
         './safelist.txt',
-        //'./**/*.php', // recursive search for *.php (be aware on every file change it will go even through /node_modules which can be slow, read doc)
     ],
     safelist: [
         'text-center',

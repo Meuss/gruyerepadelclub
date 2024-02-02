@@ -1,0 +1,14 @@
+{
+    "name": "acf/buttons-pdf",
+    "title": "Bouton PDF",
+    "description": "Un bouton PDF",
+    "style": ["file:./buttons-pdf.css"],
+    "category": "text",
+    "icon": "button",
+    "keywords": ["bouton", "pdf", "button"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "buttons-pdf.php"
+    },
+    "supports": {}
+}

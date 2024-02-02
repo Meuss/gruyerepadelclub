@@ -9,7 +9,7 @@ $link = get_field('lien');
 $svg = get_field('icone_svg');
 ?>
 
-<section>
+<section class="image-text-block">
   <div class="grid grid-cols-1 gap-10 lg:grid-cols-2">
     <div class="image_cont">
       <img src="<?= $img['url'] ?>" alt="<?= $img['alt'] ?>" />

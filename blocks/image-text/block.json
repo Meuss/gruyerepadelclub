@@ -4,7 +4,7 @@
     "description": "Une image avec un texte à droite ou à gauche",
     "style": ["file:./image-text.css"],
     "category": "text",
-    "icon": "dashicons-format-image",
+    "icon": "align-pull-left",
     "keywords": ["texte", "text", "image"],
     "acf": {
         "mode": "preview",

@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Handler when the DOM is fully loaded
-    console.log('js executed...');
+    const menuButton = document.querySelector('#hamburger');
+    const menu = document.querySelector('.offcanvas');
+
+    menuButton.addEventListener('click', function () {
+        menu.classList.toggle('open');
+    });
 });

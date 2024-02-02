@@ -1,2 +1,4 @@
 underline
 italic
+.current-menu-item
+.offcanvas

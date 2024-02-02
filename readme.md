@@ -5,6 +5,7 @@
 ## Development
 
 Quick commands:
+
 ```bash
 # dev server start
 npm run dev
@@ -16,4 +17,5 @@ npm run dev
 # production build
 npm run build
 ```
-Note: To ensure classes used inside CMS to be processed just add them to safelist.txt and run build again.
+
+Note: To ensure classes coming from wordpress are to be processed just add them to safelist.txt and run build again.

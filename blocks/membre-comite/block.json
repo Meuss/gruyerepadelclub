@@ -1,0 +1,14 @@
+{
+    "name": "acf/membre-comite",
+    "title": "Membre du comité",
+    "description": "Profil d'un membre du comité",
+    "style": ["file:./membre-comite.css"],
+    "category": "text",
+    "icon": "businessman",
+    "keywords": ["texte", "text", "image", "membre", "comité"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "membre-comite.php"
+    },
+    "supports": {}
+}

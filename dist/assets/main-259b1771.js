@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){const e=document.querySelector("#hamburger"),n=document.querySelector(".offcanvas");e.addEventListener("click",function(){n.classList.toggle("open")})});
