@@ -25,11 +25,8 @@ define('JS_LOAD_IN_FOOTER', true); // load scripts in footer?
 define('VITE_SERVER', 'http://localhost:3000');
 define('VITE_ENTRY_POINT', '/main.js');
 
-// enqueue hook
 add_action('wp_enqueue_scripts', function () {
-
     if (defined('IS_VITE_DEVELOPMENT') && IS_VITE_DEVELOPMENT === true) {
-
         // insert hmr into head for live reload
         function vite_head_module_hook()
         {
@@ -37,29 +34,27 @@ add_action('wp_enqueue_scripts', function () {
         }
         add_action('wp_head', 'vite_head_module_hook');
     } else {
-
-        // production version, 'npm run build' must be executed in order to generate assets
+        // PROD, 'npm run build' must be executed in order to generate assets
         // ----------
-
-        // read manifest.json to figure out what to enqueue
-        $manifest = json_decode(file_get_contents(DIST_PATH . '/manifest.json'), true);
-
-        // is ok
-        if (is_array($manifest)) {
-
-            // get first key, by default is 'main.js' but it can change
-            $manifest_key = array_keys($manifest);
-            if (isset($manifest_key[0])) {
-
-                // enqueue CSS files
-                foreach (@$manifest[$manifest_key[0]]['css'] as $css_file) {
-                    wp_enqueue_style('main', DIST_URI . '/' . $css_file);
-                }
-
-                // enqueue main JS file
-                $js_file = @$manifest[$manifest_key[0]]['file'];
-                if (!empty($js_file)) {
-                    wp_enqueue_script('main', DIST_URI . '/' . $js_file, JS_DEPENDENCY, '', JS_LOAD_IN_FOOTER);
+        $manifestPath = DIST_PATH . '/manifest.json';
+        if (file_exists($manifestPath)) {
+            $manifest = json_decode(file_get_contents($manifestPath), true);
+            if (is_array($manifest)) {
+                // Loop through the manifest to find and enqueue assets
+                foreach ($manifest as $entry => $details) {
+                    if (isset($details['file'])) {
+                        $path = DIST_URI . '/' . $details['file'];
+                        // Enqueue JS
+                        if (strpos($entry, '.js') !== false) {
+                            wp_enqueue_script($entry, $path, JS_DEPENDENCY, '', JS_LOAD_IN_FOOTER);
+                        }
+                        // Enqueue CSS linked with JS entry
+                        if (isset($details['css']) && is_array($details['css'])) {
+                            foreach ($details['css'] as $css_file) {
+                                wp_enqueue_style($entry . '_css', DIST_URI . '/' . $css_file);
+                            }
+                        }
+                    }
                 }
             }
         }
