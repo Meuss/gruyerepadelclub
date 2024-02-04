@@ -1,9 +1,12 @@
 .sponsors {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 1rem;
 }
-
+.sponsor {
+    width: 200px;
+}
 .sponsors img {
     width: 100%;
     aspect-ratio: 3/2;

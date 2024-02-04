@@ -29,10 +29,39 @@
             @apply text-2xl;
         }
     }
+    h4 {
+        @apply my-8 text-lg;
+        @screen lg {
+            @apply text-xl;
+        }
+    }
+    h5 {
+        @apply my-8 text-base;
+        @screen lg {
+            @apply text-lg;
+        }
+    }
+    h6 {
+        @apply my-8 text-base;
+        @screen lg {
+            @apply text-lg;
+        }
+    }
     p {
         @apply mb-6;
     }
     a {
         @apply font-bold underline;
+    }
+    .container {
+        ul {
+            @apply list-disc pl-4 mb-8;
+        }
+        ol {
+            @apply list-decimal pl-4 mb-8;
+        }
+        .wp-block-image {
+            @apply mb-16;
+        }
     }
 }

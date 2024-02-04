@@ -2,3 +2,7 @@ underline
 italic
 .current-menu-item
 .offcanvas
+.wp-block-latest-posts
+.wp-block-latest-posts__featured-image
+.wp-block-latest-posts__post-title
+.wp-block-latest-posts__post-date

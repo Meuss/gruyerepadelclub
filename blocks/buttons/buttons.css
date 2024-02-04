@@ -30,4 +30,11 @@
     &:hover::before {
         transform: translateX(-18rem);
     }
+    &.reverted {
+        flex-direction: row-reverse;
+    }
+}
+.btn img {
+    width: 1.2rem;
+    height: 1.2rem;
 }

@@ -18,7 +18,7 @@ module.exports = {
     theme: {
         fontFamily: {
             sans: ['Montserrat', 'sans-serif'],
-            serif: ['Fira Sans', 'sans-serif'],
+            serif: ['Oswald', 'Fira Sans', 'sans-serif'],
         },
         container: {
             center: true,

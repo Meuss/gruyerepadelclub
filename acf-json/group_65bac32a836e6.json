@@ -42,6 +42,26 @@
             "max_size": "",
             "mime_types": "svg",
             "preview_size": "medium"
+        },
+        {
+            "key": "field_65c0123ae02cc",
+            "label": "Icône à droite",
+            "name": "reverted",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -62,5 +82,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1706740113
+    "modified": 1707086437
 }

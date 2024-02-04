@@ -1,0 +1,42 @@
+.wpcf7-form {
+    @apply p-4 rounded-lg max-w-[500px] mx-auto shadow-xl bg-slate-200 border border-secondary;
+    @screen md {
+        @apply p-8;
+    }
+    label {
+        @apply text-sm font-bold;
+    }
+    input[type='text'],
+    input[type='email'],
+    input[type='tel'],
+    textarea {
+        @apply bg-white p-2 mt-1 font-normal border border-secondary rounded w-full;
+        &.wpcf7-not-valid {
+            @apply border-accent;
+        }
+    }
+    textarea {
+        resize: none;
+    }
+    .wpcf7-not-valid-tip {
+        @apply text-xs text-accent;
+    }
+    input[type='submit'] {
+        @apply bg-primary inline-flex overflow-hidden relative px-20 py-4 mb-4 gap-5 justify-center items-center rounded text-white transition-all duration-300 cursor-pointer shadow hover:opacity-90 font-bold text-sm;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    div.wpcf7-response-output {
+        @apply text-xs border p-4 rounded mt-4 mx-0 py-2;
+    }
+    &.invalid div.wpcf7-response-output {
+        @apply text-accent border-accent;
+    }
+    &.sent {
+        p {
+            @apply hidden;
+        }
+        div.wpcf7-response-output {
+            @apply text-sm font-bold border-none text-lime-700;
+        }
+    }
+}

@@ -22,7 +22,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 
     <?php wp_head() ?>
 </head>
@@ -37,3 +37,6 @@
         <?php get_template_part('template-parts/hero') ?>
         <main class="bg-white py-10 lg:py-16">
             <div class="container">
+                <?php if (!is_front_page()) : ?>
+                    <h1 class="mb-12"><?= the_title() ?></h1>
+                <?php endif; ?>
