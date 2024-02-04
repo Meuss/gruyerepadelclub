@@ -3,17 +3,34 @@
     grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: 2.5rem;
 }
+.image_cont {
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+}
+.image_cont img {
+    position: absolute;
+    width: 100%;
+    height: 130%;
+    object-fit: cover;
+    bottom: 0;
+}
+@media (min-width: 640px) {
+    .image_cont {
+        height: 400px;
+    }
+}
 @media (min-width: 1024px) {
     .image-text-block .grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-}
-
-@media (min-width: 1024px) {
     .image-text-block .lg:flex {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
+    }
+    .image_cont {
+        height: 500px;
     }
 }

@@ -1,15 +1,15 @@
 {
-    "key": "group_65bd749b75516",
-    "title": "Block: Membre du comité",
+    "key": "group_65bed03f5021d",
+    "title": "Block: Sponsor",
     "fields": [
         {
-            "key": "field_65bd749b7c0d0",
-            "label": "Photo de profil",
+            "key": "field_65bed066b8c9c",
+            "label": "Image",
             "name": "image",
             "aria-label": "",
             "type": "image",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -28,7 +28,7 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_65bd74c97c0d1",
+            "key": "field_65bed05bb8c9b",
             "label": "Nom",
             "name": "nom",
             "aria-label": "",
@@ -48,13 +48,13 @@
             "append": ""
         },
         {
-            "key": "field_65bd74d37c0d2",
-            "label": "Rôle",
-            "name": "role",
+            "key": "field_65bed03fb8c9a",
+            "label": "Lien",
+            "name": "lien",
             "aria-label": "",
-            "type": "text",
+            "type": "url",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -62,10 +62,7 @@
                 "id": ""
             },
             "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "placeholder": ""
         }
     ],
     "location": [
@@ -73,7 +70,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/membre-comite"
+                "value": "acf\/sponsor"
             }
         ]
     ],
@@ -86,5 +83,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1707005139
+    "modified": 1707004046
 }

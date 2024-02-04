@@ -9,6 +9,7 @@ Quick commands:
 ```bash
 # dev server start
 npm run dev
+# site running at http://localhost:8888
 ```
 
 ## Deployment

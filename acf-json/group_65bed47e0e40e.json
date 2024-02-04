@@ -1,11 +1,11 @@
 {
-    "key": "group_65bd749b75516",
-    "title": "Block: Membre du comité",
+    "key": "group_65bed47e0e40e",
+    "title": "CPT: Sponsor",
     "fields": [
         {
-            "key": "field_65bd749b7c0d0",
-            "label": "Photo de profil",
-            "name": "image",
+            "key": "field_65bed47ef792a",
+            "label": "Logo",
+            "name": "logo",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -28,13 +28,13 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_65bd74c97c0d1",
-            "label": "Nom",
-            "name": "nom",
+            "key": "field_65bed4a1f792b",
+            "label": "Site web",
+            "name": "site_web",
             "aria-label": "",
-            "type": "text",
+            "type": "url",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -42,43 +42,20 @@
                 "id": ""
             },
             "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_65bd74d37c0d2",
-            "label": "Rôle",
-            "name": "role",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "placeholder": ""
         }
     ],
     "location": [
         [
             {
-                "param": "block",
+                "param": "post_type",
                 "operator": "==",
-                "value": "acf\/membre-comite"
+                "value": "sponsors"
             }
         ]
     ],
     "menu_order": 0,
-    "position": "normal",
+    "position": "acf_after_title",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
@@ -86,5 +63,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1707005139
+    "modified": 1707005163
 }

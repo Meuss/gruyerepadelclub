@@ -22,7 +22,7 @@
                 </a>
             </div>
             <p class="mb-0 text-xs">
-                <span>© <?= date('Y') ?> Gruyère Padel Club</span>
+                <span>© <?= date('Y') ?> Gruyère Padel Club - Powered by <a href="https://thomasmiller.ch">Thomas Miller</a></span>
             </p>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">

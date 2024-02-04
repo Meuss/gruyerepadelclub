@@ -1,0 +1,78 @@
+@layer components {
+    /* Utility classes (.card, .btn, etc.) */
+    .offcanvas {
+        &.open {
+            pointer-events: auto;
+            opacity: 1;
+        }
+        nav {
+            .menu {
+                @apply flex flex-col items-center justify-center gap-8;
+            }
+            li {
+                @apply leading-none flex flex-col justify-center items-center;
+                &.first-of-type {
+                    @apply mt-8;
+                }
+            }
+            a {
+                @apply border-b-2 border-transparent leading-none no-underline transition-colors duration-200 lg:border-b-4;
+                &:hover {
+                    color: theme('colors.secondary');
+                    border-color: theme('colors.secondary');
+                }
+            }
+            li.current-menu-item {
+                a {
+                    color: theme('colors.secondary');
+                    border-color: theme('colors.secondary');
+                }
+            }
+        }
+    }
+
+    .hero {
+        h1 {
+            text-shadow: #000 1px 0 5px;
+        }
+    }
+
+    #hamburger {
+        z-index: 20;
+        svg {
+            min-height: 24px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .line {
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 6;
+            transition:
+                stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+                stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .line1 {
+            stroke-dasharray: 60 207;
+        }
+        .line2 {
+            stroke-dasharray: 60 60;
+        }
+        .line3 {
+            stroke-dasharray: 60 207;
+        }
+        .open {
+            .line1 {
+                stroke-dasharray: 90 207;
+                stroke-dashoffset: -134;
+            }
+            .line2 {
+                stroke-dasharray: 1 60;
+                stroke-dashoffset: -30;
+            }
+            .line3 {
+                stroke-dasharray: 90 207;
+                stroke-dashoffset: -134;
+            }
+        }
+    }
+}

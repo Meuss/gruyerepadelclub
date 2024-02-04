@@ -4,7 +4,7 @@
 
     <h1 class="text-5xl font-semibold">404</h1>
     <div class="mt-4">
-        <h2>Not found</h2>
+        <h2>Pas trouvé</h2>
     </div>
 
 </div>

@@ -1,0 +1,11 @@
+.sponsors {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+}
+
+.sponsors img {
+    width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+}

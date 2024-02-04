@@ -1,0 +1,14 @@
+{
+    "name": "acf/sponsors",
+    "title": "Sponsors",
+    "description": "Tous les sponsors avec lien",
+    "style": ["file:./sponsors.css"],
+    "category": "text",
+    "icon": "money-alt",
+    "keywords": ["image", "sponsors"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "sponsors.php"
+    },
+    "supports": {}
+}
