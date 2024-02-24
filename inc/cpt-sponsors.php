@@ -3,7 +3,7 @@
 function create_sponsors_post_type()
 {
     // Set up the labels for the 'sponsors' post type
-    $labels = array(
+    $labels = [
         'name'                  => _x('Sponsors', 'Post type general name', 'textdomain'),
         'singular_name'         => _x('Sponsor', 'Post type singular name', 'textdomain'),
         'menu_name'             => _x('Sponsors', 'Admin Menu text', 'textdomain'),
@@ -28,10 +28,10 @@ function create_sponsors_post_type()
         'filter_items_list'     => _x('Filter sponsors list', 'Screen reader text for the filter links heading on the admin page. Default “Filter posts list”/“Filter pages list”.', 'textdomain'),
         'items_list_navigation' => _x('Sponsors list navigation', 'Screen reader text for the pagination heading on the admin page. Default “Posts list navigation”/“Pages list navigation”.', 'textdomain'),
         'items_list'            => _x('Sponsors list', 'Screen reader text for the items list heading on the admin page. Default “Posts list”/“Pages list”.', 'textdomain'),
-    );
+    ];
 
     // Set up the arguments for the 'sponsors' post type
-    $args = array(
+    $args = [
         'labels'             => $labels,
         'public'             => true,
         'publicly_queryable' => true,
@@ -45,7 +45,7 @@ function create_sponsors_post_type()
         'menu_position'      => 10,
         'supports'           => array('title'),
         'menu_icon'          => 'dashicons-money-alt',
-    );
+    ];
 
     // Register the post type
     register_post_type('sponsors', $args);

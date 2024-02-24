@@ -16,10 +16,6 @@
         </a>
     </div>
     <div class="absolute bottom-10 left-2/4 -translate-x-1/2 flex flex-col items-center gap-6 whitespace-nowrap z-10">
-        <div class="flex flex-col justify-center sm:flex-row items-center gap-4">
-            <img src="<?= get_template_directory_uri(); ?>/assets/img/footer-logo.svg" alt="Logo Gruyère Padel Club" class="w-16 lg:w-24" />
-            <h3 class="my-0 lg:text-xl uppercase">Gruyère<br />Padel Club</h3>
-        </div>
         <div class="hidden w-full max-w-[150px] grid-flow-col grid-cols-2 gap-3 lg:grid">
             <a href="https://www.instagram.com/gruyerepadelclub" target="_blank" class="mx-auto flex flex-col justify-center rounded-full border p-4 transition-all duration-200 hover:scale-105">
                 <img src="<?= get_template_directory_uri(); ?>/assets/img/footer-instagram.svg" alt="instagram" class="inline-block" />

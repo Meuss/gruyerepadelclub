@@ -28,7 +28,7 @@
         transition: all 0.7s;
     }
     &:hover::before {
-        transform: translateX(-18rem);
+        transform: translateX(-23rem);
     }
     &.reverted {
         flex-direction: row-reverse;

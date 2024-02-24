@@ -18,14 +18,13 @@
             a {
                 @apply border-b-2 border-transparent leading-none no-underline transition-colors duration-200 lg:border-b-4;
                 &:hover {
-                    color: theme('colors.secondary');
-                    border-color: theme('colors.secondary');
+                    color: theme('colors.accent');
                 }
             }
             li.current-menu-item {
                 a {
-                    color: theme('colors.secondary');
-                    border-color: theme('colors.secondary');
+                    color: theme('colors.accent');
+                    border-color: theme('colors.accent');
                 }
             }
         }
@@ -39,7 +38,7 @@
 
     footer {
         .current-menu-item {
-            @apply text-accent;
+            @apply text-accent no-underline;
         }
     }
 

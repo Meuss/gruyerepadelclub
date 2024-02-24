@@ -3,7 +3,7 @@ module.exports = {
         // https://tailwindcss.com/docs/content-configuration
         './*.php',
         './inc/**/*.php',
-        './templates/**/*.php',
+        './**/*.php',
         './template-parts/**/*.php',
         './blocks/**/*.php',
         './blocks/membre-comite/membre-comite.php',

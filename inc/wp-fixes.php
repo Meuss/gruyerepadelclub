@@ -49,3 +49,11 @@ function remove_categories_and_tags()
 }
 
 add_action('init', 'remove_categories_and_tags');
+
+// Disable Gutenberg for tournois
+add_filter('use_block_editor_for_post_type', 'gpc_disable_gutenberg', 10, 2);
+function gpc_disable_gutenberg($current_status, $post_type)
+{
+    if ($post_type === 'tournoi') return false;
+    return $current_status;
+}
