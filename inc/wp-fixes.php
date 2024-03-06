@@ -57,3 +57,9 @@ function gpc_disable_gutenberg($current_status, $post_type)
     if ($post_type === 'tournoi') return false;
     return $current_status;
 }
+
+add_theme_support('post-thumbnails', array(
+    'post',
+    'page',
+    'tournoi',
+));
