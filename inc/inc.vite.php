@@ -36,10 +36,13 @@ add_action('wp_enqueue_scripts', function () {
     } else {
         // PROD, 'npm run build' must be executed in order to generate assets
         // ----------
-        $manifestPath = DIST_PATH . '/manifest.json';
+        $manifestPath = DIST_PATH . '/.vite/manifest.json';
+
         if (file_exists($manifestPath)) {
+            // write to wordpress log
             $manifest = json_decode(file_get_contents($manifestPath), true);
             if (is_array($manifest)) {
+                error_log('Manifest file exists: ' . $manifestPath);
                 // Loop through the manifest to find and enqueue assets
                 foreach ($manifest as $entry => $details) {
                     if (isset($details['file'])) {
