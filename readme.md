@@ -4,13 +4,13 @@
 
 ## Development
 
--   Mamp, php 8.2
+-   Mamp, php 8.2,
 -   Change any acf settings locally
 -   Note: to ensure classes coming from wordpress are to be processed, add them to safelist.txt
 
 ```bash
+# http://localhost:8888
 npm run dev
-# site running at http://localhost:8888
 ```
 
 ## Deployment to production
