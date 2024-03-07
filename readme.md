@@ -4,19 +4,20 @@
 
 ## Development
 
-Quick commands:
+Work locally with Mamp and php 8.2.
+
+Change any acf settings locally, they will automatically be pushed on deploy.
 
 ```bash
-# dev server start
 npm run dev
 # site running at http://localhost:8888
 ```
 
-## Deployment
+Note: To ensure classes coming from wordpress are to be processed just add them to safelist.txt and run build again.
+
+## Deployment to production
 
 ```bash
 # production build
 npm run build
 ```
-
-Note: To ensure classes coming from wordpress are to be processed just add them to safelist.txt and run build again.
