@@ -4,8 +4,6 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-// define('IS_VITE_DEVELOPMENT', true); => wp-config
-
 include "inc/inc.vite.php";
 include "inc/wp-fixes.php";
 include "inc/cpt-sponsors.php";
