@@ -1,4 +1,13 @@
 <?php
+
+// activate some features
+add_theme_support('title-tag');
+add_theme_support('post-thumbnails', [
+    'post',
+    'page',
+    'tournoi',
+]);
+
 // Add SVG to allowed mime types
 function cc_mime_types($mimes)
 {
@@ -57,12 +66,6 @@ function gpc_disable_gutenberg($current_status, $post_type)
     if ($post_type === 'tournoi') return false;
     return $current_status;
 }
-
-add_theme_support('post-thumbnails', array(
-    'post',
-    'page',
-    'tournoi',
-));
 
 /**
  * Proper ob_end_flush() for all levels

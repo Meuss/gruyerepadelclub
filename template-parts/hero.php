@@ -1,4 +1,4 @@
-<div class="hero relative flex flex-col justify-end py-16 text-white object-cover min-h-[<?= is_front_page() ? '75' : '60' ?>svh]">
+<div class="hero relative flex flex-col justify-end py-16 text-white object-cover min-h-[300px] md:min-h-[600px]">
     <div class="absolute inset-0 -z-10">
         <?php
         $featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');

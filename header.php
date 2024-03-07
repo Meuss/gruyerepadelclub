@@ -6,6 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Thomas Miller, thomasmiller.ch" />
+    <title>
+        <?php
+        wp_title('-', true, 'right');
+        bloginfo('name');
+        ?>
+    </title>
+    <meta name="description" content="<?php bloginfo('description'); ?>">
     <!-- Open Graph defaults -->
     <meta property="og:image:height" content="1072" />
     <meta property="og:image:width" content="2048" />
