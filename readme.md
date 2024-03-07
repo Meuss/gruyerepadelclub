@@ -1,23 +1,20 @@
 # Gruyère padel club
 
-> Theme built with Tailwindcss & Vite, locally using Mamp with php 8.2
+> Theme built with Tailwindcss & Vite
 
 ## Development
 
-Work locally with Mamp and php 8.2.
-
-Change any acf settings locally, they will automatically be pushed on deploy.
+-   Mamp, php 8.2
+-   Change any acf settings locally
+-   Note: to ensure classes coming from wordpress are to be processed, add them to safelist.txt
 
 ```bash
 npm run dev
 # site running at http://localhost:8888
 ```
 
-Note: To ensure classes coming from wordpress are to be processed just add them to safelist.txt and run build again.
-
 ## Deployment to production
 
-```bash
-# production build
-npm run build
-```
+> Build is automatically triggered on push to master, via github actions SSH deploy.
+
+Automatically deploys to infomaniak, except config files.
