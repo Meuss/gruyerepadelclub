@@ -63,27 +63,12 @@ jobs:
                   name: vite-build
                   path: .
 
-            - name: Set environment variables (master)
-              if: github.ref == 'refs/heads/master'
-              run: |
-                  echo "SFTP_USER=${{ secrets.SFTP_PROD_USER }}" >> $GITHUB_ENV
-                  echo "SFTP_PASS=${{ secrets.SFTP_PROD_PASS }}" >> $GITHUB_ENV
-                  echo "DEPLOY_PATH=/wordpress/wp-content/themes/gruyerepadelclub" >> $GITHUB_ENV
-
-            - name: Set outputs
-              # Workaround to reference environment variables as inputs using step outputs, since we can't pass environment variables as inputs at the moment.
-              id: sftp_details
-              run: |
-                  echo "user=${SFTP_USER}" >> $GITHUB_OUTPUT
-                  echo "pass=${SFTP_PASS}" >> $GITHUB_OUTPUT
-                  echo "deploy_path=${DEPLOY_PATH}" >> $GITHUB_OUTPUT
-
             - name: Deploy via SFTP
               uses: pressidium/lftp-mirror-action@v1
               with:
                   host: ${{ secrets.SFTP_HOST }}
                   port: ${{ secrets.SFTP_PORT }}
-                  user: ${{ steps.sftp_details.outputs.user }}
-                  pass: ${{ steps.sftp_details.outputs.pass }}
-                  remoteDir: ${{ steps.sftp_details.outputs.deploy_path }}
+                  user: ${{ secrets.SFTP_USER }}
+                  pass: ${{ secrets.SFTP_PASS }}
+                  remoteDir: '/wordpress/wp-content/themes/gruyerepadelclub'
                   options: '--verbose'

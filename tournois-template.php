@@ -111,5 +111,4 @@ $oneWeekAgo = new DateTime('now -1 week', new DateTimeZone('Europe/Zurich'));
         <?php endforeach; ?>
     </div>
 </div>
-
 <?php get_footer() ?>
