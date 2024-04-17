@@ -10,7 +10,6 @@ Template Name: Page Tournois
 
 <?php
 setlocale(LC_TIME, 'fr_FR.UTF-8');
-date_default_timezone_set('Europe/Zurich');
 
 // get all published tournois
 $tournois = get_posts([
@@ -26,7 +25,7 @@ $oneWeekAgo = new DateTime('now -1 week', new DateTimeZone('Europe/Zurich'));
     <?php foreach ($tournois as $tournoi) : ?>
         <?php
         $startdate = get_field('date_de_debut', $tournoi->ID);
-        $dateObject = DateTime::createFromFormat('d.m.Y H:i', $startdate, new DateTimeZone('Europe/Zurich'));
+        $dateObject = DateTime::createFromFormat('d.m.Y H:i', $startdate);
 
         if ($dateObject < $oneWeekAgo) {
             continue;
@@ -38,7 +37,6 @@ $oneWeekAgo = new DateTime('now -1 week', new DateTimeZone('Europe/Zurich'));
         $link = get_field('lien_dinscription', $tournoi->ID);
         $infos = get_field('informations', $tournoi->ID);
 
-        $dateObject = DateTime::createFromFormat('d.m.Y H:i', $startdate);
         $formatter = new IntlDateFormatter(
             'fr_FR',
             IntlDateFormatter::FULL,
@@ -77,7 +75,7 @@ $oneWeekAgo = new DateTime('now -1 week', new DateTimeZone('Europe/Zurich'));
         <?php foreach ($tournois as $tournoi) : ?>
             <?php
             $startdate = get_field('date_de_debut', $tournoi->ID);
-            $dateObject = DateTime::createFromFormat('d.m.Y H:i', $startdate, new DateTimeZone('Europe/Zurich'));
+            $dateObject = DateTime::createFromFormat('d.m.Y H:i', $startdate);
 
             if ($dateObject >= $oneWeekAgo) {
                 continue;
