@@ -89,7 +89,6 @@ $oneWeekAgo = new DateTime('now -1 week', new DateTimeZone('Europe/Zurich'));
             $link = get_field('lien_dinscription', $tournoi->ID);
             $infos = get_field('informations', $tournoi->ID);
 
-            $dateObject = DateTime::createFromFormat('d.m.Y H:i', $startdate);
             $formatter = new IntlDateFormatter(
                 'fr_FR',
                 IntlDateFormatter::FULL,
