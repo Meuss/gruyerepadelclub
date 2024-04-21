@@ -18,3 +18,7 @@ npm run dev
 > Build is automatically triggered on push to master, via github actions SSH deploy.
 
 Automatically deploys to infomaniak, except config files.
+
+# TODO:
+
+Fix deploy?
