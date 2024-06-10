@@ -8,9 +8,9 @@ $file = get_field('pdf');
 $svg = get_field('icone_svg');
 ?>
 
-<a class="btn" href="" target="">
-  <?php if ($svg) : ?>
-    <img src=<?= $svg['url'] ?> alt=<?= $svg['alt'] ?> />
-  <?php endif; ?>
-  <span><?= $text ?></span>
+<a class="btn" href="<?= $file['url'] ?>" target="">
+    <?php if ($svg) : ?>
+        <img src=<?= $svg['url'] ?> alt=<?= $svg['alt'] ?> />
+    <?php endif; ?>
+    <span><?= $text ?></span>
 </a>
