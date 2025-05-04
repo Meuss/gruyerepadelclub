@@ -1,8 +1,7 @@
+@use 'custom-base';
+@use 'custom-components';
+@use 'custom-utilities';
+@use 'contact-form';
 @tailwind base;
-@import 'custom-base';
 @tailwind components;
-@import 'custom-components';
 @tailwind utilities;
-@import 'custom-utilities';
-
-@import 'contact-form';
