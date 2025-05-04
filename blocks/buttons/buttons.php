@@ -10,10 +10,12 @@ $center = get_field('center');
 ?>
 
 <div class="flex<?= $center ? ' justify-center' : '' ?>">
-    <a class="btn<?= $reverted ? ' reverted' : '' ?>" href=<?= $link['url'] ?> target="<?= $link['target'] ?>">
-        <?php if ($svg) : ?>
-            <img src=<?= $svg['url'] ?> alt=<?= $svg['alt'] ?> />
-        <?php endif; ?>
-        <span><?= $link['title'] ?></span>
-    </a>
+    <?php if ($link && is_array($link) && !empty($link['url'])) : ?>
+        <a class="btn<?= $reverted ? ' reverted' : '' ?>" href="<?= esc_url($link['url']) ?>" target="<?= esc_attr($link['target'] ?? '') ?>">
+            <?php if ($svg && is_array($svg) && !empty($svg['url'])) : ?>
+                <img src="<?= esc_url($svg['url']) ?>" alt="<?= esc_attr($svg['alt'] ?? '') ?>" />
+            <?php endif; ?>
+            <span><?= esc_html($link['title'] ?? '') ?></span>
+        </a>
+    <?php endif; ?>
 </div>
